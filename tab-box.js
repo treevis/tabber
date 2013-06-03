@@ -1,8 +1,8 @@
 /* Script for Tab Changing */
 function MiniTabs( config ) {
     
-    if( !$('body').hasClass('js') ) {
-        $('body').addClass('js');
+    if( !$('html').hasClass('js') ) {
+        $('html').addClass('js');
     }
     
     var config = {

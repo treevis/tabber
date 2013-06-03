@@ -76,20 +76,30 @@ a:focus {
     background: #fff;
 }
 
-
 [role=tablist] {
+    font-size: 1.4em;
     list-style: none;
-    margin: 0;
+    margin: 0 0 1em;
     padding: 0;
 }
 
-.js [role=tab] {
-    float: left;
+.js [role="tablist"] {
+    margin-bottom: 0;
+}
+
+[role="tab"] {
+    display: inline-block;
     font-size: 1.4em;
-    font-weight: bold;
     line-height: 1.285714;
-    list-style: none;
     margin: 0;
+    padding: 5px 20px 5px 0;
+}
+
+.js [role=tab] {
+    display: block;
+    float: left;
+    font-size: 1.25em;
+    line-height: 1.285714;
     padding: 5px 10px;
 }
 
@@ -129,6 +139,18 @@ a:focus {
 }
 
 [role=tabpanel] h2 { margin: 0.5em 0 0; }
+
+[role="tabpanel"] {
+    margin-bottom: 1em;
+    padding: 1em 0 0.5em;
+}
+
+[role="tabpanel"]:target {
+    background: #fff;
+    margin-left: -1em;
+    margin-right: -1em;
+    padding: 1em 1em 0.5em;
+}
 
 .js [role=tabpanel] {
     display: none;
