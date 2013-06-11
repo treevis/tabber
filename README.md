@@ -1,4 +1,4 @@
 tabber
 ======
 
-Creating tabbed interfaces
+Supporting views with and without JavaScript.
