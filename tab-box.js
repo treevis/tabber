@@ -1,6 +1,7 @@
 /* Script for Tab Changing */
-function MiniTabs( config ) {
+function Tabber( config ) {
     
+    // This will trigger the tab UI CSS
     if( !$('html').hasClass('js') ) {
         $('html').addClass('js');
     }
@@ -11,11 +12,11 @@ function MiniTabs( config ) {
         selectedTab : config.selectedTab || ''
     }
     
+    // If no tabs or tab panels, exit out.
     if ( config.tabs.length == 0 || config.tabPanels.length == 0 ) { return; }
     
     function clickTab( target, config ) {
-        var tabContentHref = getTargetHref( target ),
-            tab = '',
+        var tab = '',
             tabpanel = '';
         
         resetSelected( config );
@@ -31,18 +32,6 @@ function MiniTabs( config ) {
         $( tab ).addClass( 'selected' ).attr("aria-selected", "true");
         $( tabpanel ).addClass('selected').attr("aria-hidden", "false");
 
-    }
-    
-    function getTargetHref( target ) {
-        var tabContentHref = '';
-        
-        if( $(target).is("A") ) {
-            tabContentHref = $(target).attr('href').split( '#' )[ 1 ];
-        }
-        else if( $(target).is("LI") ) {
-            tabContentHref = "#" + $(target).attr('aria-controls');
-        }
-        return tabContentHref;
     }
     
     function resetSelected( config ) {
@@ -65,5 +54,5 @@ function MiniTabs( config ) {
 
 
 $(document).ready(function() {
-    var miniTab = new MiniTabs( config = {} );
+    var tabber = new Tabber( config = {} );
 });
