@@ -3,21 +3,18 @@
 	'use strict';
 
 	var $tabset = $(tabset);
+	
+	// Add a class to our tabset to trigger the tabbed interface from our CSS.
+	$tabset.addClass('js-powered');
 
 	// For each individual tab DIV, set class and aria-hidden attribute, and hide it
-	$tabset.find('> div').attr({
-		'class': 'tab-panel is-hidden',
-		'aria-hidden': 'true'
-	});
+	$tabset.find('.tab-panel').addClass('is-hidden').attr('aria-hidden', 'true');
 	
 	// Get the list of tab links
-	var $tabsList = $tabset.find('ul:first').attr({
-        'class': 'tabslist'
-    });
+	var $tabsList = $tabset.find('.tabslist');
 	
 	// For each link in the tabs list...
 	$tabsList.find('a').each(function(i) {
-		
 		var $tab = $(this);
 		
 		// Create a unique id using the tab link's href
