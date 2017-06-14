@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabbed Content Prototype</title>
+    
+    <link rel="stylesheet" href="../tabs.css">
+</head>
+
+<body>
+    <header>
+        <h1>Tabbed Content: In-page Switching (using regular JS)</h1>
+    </header>
+    
+    <main>
+        <div id="tabber" class="tabs">
+            <ul class="tabslist">
+                <li><a href="#panel1" id="tab-panel1">Tab 1</a></li>
+                <li><a href="#panel2" id="tab-panel2">Tab 2</a></li>
+            </ul>
+            
+            <div class="tab-content">
+                <div id="panel1" class="tab-panel" aria-labelledby="tab-panel1">
+                    <h2>Tab 1 Header</h2>
+                    <p>Pellentesque nibh felis, eleifend id, commodo in, interdum vitae, leo. Praesent eu elit. Ut eu ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Maecenas elementum augue nec nisl. Proin auctor lorem at nibh. Curabitur nulla purus, feugiat id, elementum in, <a href="#">lobortis quis</a>, pede. Vivamus sodales adipiscing sapien. Vestibulum posuere nulla eget wisi. Integer volutpat ligula eget enim. Suspendisse vitae arcu. Quisque pellentesque. Nullam consequat, sem vitae rhoncus tristique, mauris nulla fermentum est, bibendum ullamcorper sapien magna et quam. Sed dapibus vehicula odio. Proin bibendum gravida nisl. Fusce lorem. Phasellus sagittis, nulla in hendrerit laoreet, libero lacus feugiat urna, eget hendrerit pede magna vitae lorem. Praesent mauris.</p>
+                </div>
+                
+                <div id="panel2" class="tab-panel" aria-labelledby="tab-panel2">
+                    <h2>Tab 2 Header</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim. Suspendisse id velit vitae ligula volutpat condimentum. Aliquam erat volutpat. Sed quis velit. Nulla facilisi. Nulla libero. Vivamus pharetra posuere sapien. Nam consectetuer. Sed aliquam, nunc eget euismod ullamcorper, lectus nunc ullamcorper orci, fermentum bibendum enim nibh eget ipsum. Donec porttitor ligula eu dolor. Maecenas vitae nulla consequat libero cursus venenatis. Nam magna enim, accumsan eu, blandit sed, blandit a, eros.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy;2016 Travis Forden.</p>
+    </footer>
+
+    <script src="tabs.js"></script>
+</body>
+</html>
